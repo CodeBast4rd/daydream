@@ -44,7 +44,7 @@ class EventRecorder {
       })
 
       this.lastMouse = performance.now()
-    }, 100)
+    }, 2000)
   }
 
   handleScroll (e) {

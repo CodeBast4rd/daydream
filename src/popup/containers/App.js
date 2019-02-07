@@ -6,11 +6,9 @@ export default class AppContainer extends Component {
     super(props)
 
     this.state = {
-      selectedTab: 'Nightmare',
       recording: []
     }
-
-    this.onSelectTab = this.onSelectTab.bind(this)
+    
     this.onRestart = this.onRestart.bind(this)
   }
 
@@ -18,7 +16,6 @@ export default class AppContainer extends Component {
     return React.createElement(App, {
       ...this.props,
       ...this.state,
-      onSelectTab: this.onSelectTab,
       onRestart: this.onRestart
     })
   }
@@ -27,10 +24,6 @@ export default class AppContainer extends Component {
     chrome.storage.sync.get('recording', ({ recording }) => {
       this.setState({ recording })
     })
-  }
-
-  onSelectTab (selectedTab) {
-    this.setState({ selectedTab })
   }
 
   onRestart () {

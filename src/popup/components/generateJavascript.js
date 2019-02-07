@@ -12,28 +12,28 @@ function generateJavascript (events) {
     switch (action) {
       case 'mouseover':
         result += `  .mouseover('${selector}')`
-        break
+        break;
       case 'wait':
         result += `  .wait(${value})`
-        break
+        break;
       case 'scroll':
         result += `  .scrollTo(${top}, ${left})`
-        break
+        break;
       case 'change':
         result += `  .type('${selector}', '${value}')`
-        break
+        break;
       case 'keypress':
         result += `  .type('${selector}', '\\u000d')`
-        break
+        break;
       case 'click':
         result += `  .click('${selector}')`
-        break
+        break;
       case 'goto':
         result += `  .goto('${url}')`
-        break
+        break;
       case 'reload':
         result += `  .refresh()`
-        break
+        break;
     }
 
     return result
