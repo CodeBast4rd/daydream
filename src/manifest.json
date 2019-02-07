@@ -1,7 +1,7 @@
 {
   "name": "Daydream",
-  "version": "3.0.1",
-  "manifest_version": 2,
+  "version": "3.0.5",
+  "manifest_version": 3,
   "description": "A chrome extension to record your actions into a nightmare script.",
   "permissions": [
     "storage",
@@ -9,7 +9,7 @@
     "tabs",
     "*://*/"
   ],
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; https://*.segment.com https://*.mxpnl.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' object-src 'self'",
   "browser_action": {
     "default_icon": "images/icon-idle.png",
     "default_title": "Daydream"
